@@ -23,19 +23,21 @@
     padding: 0;
   }
 
-  body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    background:
-      radial-gradient(circle at top, rgba(111, 211, 255, 0.12), transparent 55%),
-      radial-gradient(circle at bottom, rgba(244, 210, 122, 0.18), transparent 60%),
-      linear-gradient(145deg, var(--bg) 0%, var(--bg-soft) 60%, #030314 100%);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: var(--text-main);
-  }
+ body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;   /* stack main + footer vertically */
+  align-items: center;      /* center them horizontally */
+  justify-content: flex-start;  /* content starts at top, footer below */
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(111, 211, 255, 0.12), transparent 55%),
+    radial-gradient(circle at bottom, rgba(244, 210, 122, 0.18), transparent 60%),
+    linear-gradient(145deg, var(--bg) 0%, var(--bg-soft) 60%, #030314 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+}
+
 
   .card {
     max-width: 540px;
@@ -162,17 +164,6 @@
     }
   }
 footer {
-  grid-column: 1 / -1 !important;
-  width: 100% !important;
-  text-align: center !important;
-  display: block !important;
-  margin-top: 3rem !important;
-  position: relative !important;
-}
-
-  
-  
-  footer {
   width: 100%;
   text-align: center;
   margin-top: 3rem;
@@ -186,6 +177,7 @@ footer p {
   line-height: 1.7;
   font-size: 0.9rem;
 }
+
 </style>
 
 
