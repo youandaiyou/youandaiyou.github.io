@@ -1,701 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>YOU AND AI™</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="YOU AND AI™ – a human-first creative movement by author Raymond Proost, exploring the psychology of AI, inner reflection, and intelligent collaboration between humans and machines.">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="YOU AND AI™ — Raymond Proost" />
-  <meta property="og:description" content="A human-first movement for AI-assisted growth: free AI guide, AI Signatures™, and The Psychology of AI series." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-DOMAIN-HERE" />
-  <!-- <meta property="og:image" content="https://YOUR-DOMAIN-HERE/path/to/social-image.jpg" /> -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Human-first interaction with artificial intelligence.">
   <style>
-    :root {
-      --bg: #02030a;
-      --bg-soft: #050814;
-      --bg-softer: #090e20;
-      --accent-gold: #f5c76a;
-      --accent-blue: #5fb3ff;
-      --text-main: #f5f5f7;
-      --text-soft: #b6b9c8;
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.55);
-      --radius-lg: 22px;
-      --radius-xl: 28px;
-      --transition-fast: 180ms ease-out;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #0b1022 0, #02030a 55%, #000000 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      color: #111;
+      background: #fff;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 28px 18px 60px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 28px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: conic-gradient(from 210deg, var(--accent-gold), var(--accent-blue), #7c5bff, var(--accent-gold));
-      padding: 2px;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.09);
-    }
-
-    .brand-mark-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      background: radial-gradient(circle at 25% 15%, rgba(255, 255, 255, 0.24), rgba(5, 8, 20, 0.98) 55%, #000 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.65rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-gold);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text span:first-child {
-      font-size: 0.88rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    .brand-text span:last-child {
-      font-size: 0.82rem;
-      color: var(--text-soft);
-    }
-
-    nav {
-      display: flex;
-      gap: 16px;
-      font-size: 0.83rem;
-      color: var(--text-soft);
-    }
-
-    nav a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      transition: border var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
-    }
-
-    nav a:hover {
-      border-color: rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.02);
-      color: var(--text-main);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-      gap: 28px;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 840px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-    }
-
-    .hero-main {
-      padding: 26px 24px 24px;
-      border-radius: var(--radius-xl);
-      background: radial-gradient(circle at top left, rgba(95, 179, 255, 0.14), transparent 58%), radial-gradient(circle at bottom right, rgba(245, 199, 106, 0.16), transparent 60%), linear-gradient(145deg, rgba(9, 14, 32, 0.96), rgba(3, 5, 15, 0.98));
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.74rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      background: rgba(3, 7, 18, 0.8);
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      margin-bottom: 14px;
-    }
-
-    .hero-pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: radial-gradient(circle, var(--accent-gold), #ff7b3f);
-      box-shadow: 0 0 14px rgba(255, 140, 64, 0.85);
-    }
-
-    .hero h1 {
-      font-size: clamp(1.8rem, 2.35vw, 2.4rem);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .hero h1 span.highlight {
-      background-image: linear-gradient(120deg, var(--accent-gold), var(--accent-blue));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-sub {
-      font-size: 0.98rem;
-      color: var(--text-soft);
-      margin-bottom: 18px;
-    }
-
-    .hero-sub strong {
-      color: var(--accent-gold);
-      font-weight: 500;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border-radius: 999px;
-      padding: 9px 18px;
-      font-size: 0.9rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: background var(--transition-fast), border var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), color var(--transition-fast);
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background-image: linear-gradient(135deg, var(--accent-gold), var(--accent-blue));
-      color: #050608;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
-      font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.85);
-    }
-
-    .btn-ghost {
-      border-color: rgba(255, 255, 255, 0.26);
-      background: rgba(5, 8, 20, 0.9);
-      color: var(--text-main);
-    }
-
-    .btn-ghost:hover {
-      border-color: rgba(255, 255, 255, 0.45);
-      background: rgba(8, 12, 30, 1);
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .hero-note strong {
-      color: var(--accent-blue);
-      font-weight: 500;
-    }
-
-    .hero-side {
-      display: grid;
-      gap: 14px;
-    }
-
-    .card {
-      padding: 16px 16px 14px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(155deg, rgba(9, 12, 30, 0.95), rgba(5, 7, 18, 0.98));
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .card-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 6px;
-    }
-
-    .card-title {
-      font-size: 0.92rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .card-text {
-      font-size: 0.83rem;
-      color: var(--text-soft);
-      margin-bottom: 8px;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      padding: 3px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      color: var(--text-soft);
-    }
-
-    .layout-grid {
-      display: grid;
-      gap: 22px;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 840px) {
-      .layout-grid.two {
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      }
-      .layout-grid.books {
-        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.15fr);
-      }
-    }
-
-    .section-title {
-      font-size: 1.02rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      margin-bottom: 10px;
-    }
-
-    .section-heading {
-      font-size: 1.04rem;
-      margin-bottom: 6px;
-    }
-
-    .section-text {
-      font-size: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    .list-soft {
-      list-style: none;
-      margin-top: 8px;
-      font-size: 0.88rem;
-      color: var(--text-soft);
-    }
-
-    .list-soft li {
-      padding-left: 14px;
-      position: relative;
-      margin-bottom: 4px;
-    }
-
-    .list-soft li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--accent-blue);
-    }
-
-    .books-row {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .book {
-      display: flex;
-      gap: 12px;
-      padding: 10px 10px;
-      border-radius: 18px;
-      background: radial-gradient(circle at top left, rgba(95, 179, 255, 0.13), transparent 60%),
-                  linear-gradient(135deg, rgba(8, 10, 22, 0.96), rgba(3, 5, 12, 0.98));
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .book-spine {
-      width: 7px;
-      border-radius: 999px;
-      background-image: linear-gradient(180deg, var(--accent-gold), var(--accent-blue));
-      flex-shrink: 0;
-    }
-
-    .book-main {
-      flex: 1;
-    }
-
-    .book-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .book-sub {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      margin-bottom: 6px;
-    }
-
-    .book-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 0.78rem;
-    }
-
-    .inline-link {
-      font-size: 0.8rem;
-      color: var(--accent-blue);
-      text-decoration: underline;
-      text-decoration-style: dotted;
-      text-underline-offset: 3px;
-      cursor: pointer;
-    }
-
-    .coming-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.75rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px dashed rgba(255, 255, 255, 0.16);
-      color: var(--text-soft);
-      margin-bottom: 6px;
-    }
-
-    .footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      margin-top: 26px;
-      padding-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .footer a {
-      color: var(--accent-blue);
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
+    a { color: inherit; }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">
-        <div class="brand-mark">
-          <div class="brand-mark-inner">
-            <span>YOU</span>
-          </div>
-        </div>
-        <div class="brand-text">
-          <span>YOU AND AI™</span>
-          <span>by Raymond Proost</span>
-        </div>
-      </div>
-      <nav>
-        <a href="#guide">Free Guide</a>
-        <a href="#signature">AI Signature™</a>
-        <a href="#books">Books</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero">
-        <div class="hero-main">
-          <div class="hero-pill">
-            <span class="hero-pill-dot"></span>
-            <span>Human-first AI reflection</span>
-          </div>
-          <h1>
-            <span class="highlight">YOU AND AI™</span><br />
-            A new way to meet your own mind.
-          </h1>
-          <p class="hero-sub">
-            A quiet, psychological approach to AI.  
-            Not hype. Not fear.  
-            Just a clear structure for how your inner world meets intelligent systems — so conversations with AI become
-            <strong>honest, grounded, and growth-oriented.</strong>
-          </p>
-          <div class="hero-cta-row">
-            <a class="btn btn-primary" href="#guide">
-              Download the Free AI Guide
-            </a>
-            <a class="btn btn-ghost" href="#signature">
-              Coming Soon: Your AI Signature™
-            </a>
-          </div>
-          <p class="hero-note">
-            Created by <strong>Raymond Proost</strong> — author of <em>On the Edge of Dreaming</em> and
-            <em>The Psychology of AI</em> series.
-          </p>
-        </div>
+<!-- HERO -->
+<section style="max-width: 980px; margin: 0 auto; padding: 72px 20px;">
+  <h1 style="font-size: clamp(32px, 4vw, 54px); line-height: 1.05; margin-bottom: 18px;">
+    YOU AND AI™ helps you work with artificial intelligence without losing clarity, agency, or balance.
+  </h1>
+  <p style="font-size: 18px; line-height: 1.6;">
+    It’s not about smarter machines.<br>
+    It’s about setting the right frame — so AI stays useful, grounded, and in its place.
+  </p>
+</section>
 
-        <aside class="hero-side">
-          <div class="card">
-            <div class="card-label">What this is</div>
-            <div class="card-title">A map for speaking with AI without losing yourself.</div>
-            <p class="card-text">
-              You bring a specific inner pattern into every AI chat — your way of thinking, sensing, asking, doubting, and
-              hoping.  
-              YOU AND AI™ is about making that pattern visible, so AI becomes a mirror, not a master.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Inner clarity</span>
-              <span class="tag">Psychological safety</span>
-              <span class="tag">Better questions</span>
-            </div>
-          </div>
+<!-- WHY -->
+<section style="max-width: 980px; margin: 0 auto; padding: 12px 20px 48px;">
+  <h2>Why this exists</h2>
+  <p>Artificial intelligence responds to structure before intelligence.</p>
+  <p>Most people focus on what AI can do.<br>YOU AND AI™ focuses on how humans approach it.</p>
+  <p>When the frame is unclear, AI feels overwhelming.<br>When the frame is clear, AI becomes practical.</p>
+</section>
 
-          <div class="card">
-            <div class="card-label">The core tools</div>
-            <p class="card-text">
-              • A concise free guide for starting healthy AI conversations  
-              • The <strong>AI Signature™</strong> concept — your personal interaction blueprint  
-              • The <strong>7-system</strong> for understanding how different minds meet AI
-            </p>
-          </div>
-        </aside>
-      </section>
+<!-- SUPPORTS -->
+<section style="max-width: 980px; margin: 0 auto; padding: 12px 20px 48px;">
+  <h2>What YOU AND AI™ supports</h2>
+  <ul>
+    <li>Stay clear and intentional when using AI</li>
+    <li>Avoid over-identification or dependency</li>
+    <li>Reduce noise, excess explanation, and confusion</li>
+    <li>Keep human judgment at the center</li>
+  </ul>
+</section>
 
-      <!-- FREE GUIDE + AI SIGNATURE -->
-      <section id="guide" class="layout-grid two">
-        <div class="card">
-          <div class="section-title">Start here</div>
-          <h2 class="section-heading">Free Guide — “How to Begin with AI Without Losing Yourself”</h2>
-          <p class="section-text">
-            A short, practical PDF that shows you how to start AI conversations in a way that protects your inner world
-            while still using the full power of the system in front of you.
-          </p>
-          <ul class="list-soft">
-            <li>How to ask questions that reveal more of your own mind, not less</li>
-            <li>Simple daily practices for staying grounded while using AI</li>
-            <li>How to use AI as a mirror for reflection instead of a substitute for thinking</li>
-          </ul>
-          <div class="hero-cta-row" style="margin-top: 12px;">
-            <!-- TODO: replace with your real PDF or Payhip link -->
-            <a class="btn btn-primary" href="https://YOUR-LINK-TO-FREE-GUIDE.pdf">
-              Download Free Guide (PDF)
-            </a>
-          </div>
-          <p class="hero-note" style="margin-top: 8px;">
-            You can read it in under 30 minutes, then carry the structure into every AI you use.
-          </p>
-        </div>
+<!-- NOT -->
+<section style="max-width: 980px; margin: 0 auto; padding: 12px 20px 48px;">
+  <h2>What this is not</h2>
+  <ul>
+    <li>a personality</li>
+    <li>an authority</li>
+    <li>a source of truth</li>
+    <li>a replacement for thinking</li>
+  </ul>
+  <p>It is a structure for interaction — not a belief system.</p>
+</section>
 
-        <div id="signature" class="card">
-          <div class="section-title">Coming soon</div>
-          <h2 class="section-heading">Your AI Signature™</h2>
-          <div class="coming-chip">
-            <span>Enroll early for updates</span>
-          </div>
-          <p class="section-text">
-            Every person has a unique way they lean into AI — a mix of cognitive style, emotional tone, and how they
-            search for meaning.  
-            Your <strong>AI Signature™</strong> is a structured profile that captures that pattern.
-          </p>
-          <ul class="list-soft">
-            <li>A repeatable way to introduce yourself to any AI</li>
-            <li>Context that helps AI respond to your real internal state</li>
-            <li>A tool for more intelligent, honest, growth-focused conversations</li>
-          </ul>
-          <p class="section-text" style="margin-top: 10px;">
-            If you’d like to be notified when the first wave of AI Signatures™ opens:
-          </p>
-          <p class="section-text">
-            → Email <a class="inline-link" href="mailto:YOUR-EMAIL-HERE?subject=YOU%20AND%20AI%E2%84%A2%20%E2%80%94%20AI%20Signature%E2%84%A2%20Waitlist">“YOU AND AI™ — AI Signature™ Waitlist”</a>  
-            and you’ll be on the quiet early list.
-          </p>
-        </div>
-      </section>
+<!-- AI IDENTITY -->
+<section style="max-width: 980px; margin: 0 auto; padding: 72px 20px;">
+  <h2>AI Identity™</h2>
+  <p>A personalised way to set how you interact with AI.</p>
 
-      <!-- BOOKS -->
-      <section id="books" class="layout-grid books">
-        <div class="card">
-          <div class="section-title">The psychology of AI</div>
-          <h2 class="section-heading">The Psychology of AI — Volumes I &amp; II</h2>
-          <p class="section-text">
-            A clear, human-centered exploration of what actually happens inside us when we begin speaking honestly with
-            intelligent systems.
-          </p>
+  <p>
+    AI Identity™ helps you establish a consistent, human-first interaction style when working with artificial intelligence.
+  </p>
+  <p>
+    It does not change the AI.<br>
+    It changes how you frame the interaction.
+  </p>
+</section>
 
-          <div class="books-row" style="margin-top: 12px;">
-            <article class="book">
-              <div class="book-spine"></div>
-              <div class="book-main">
-                <div class="book-title">YOU AND AI — Volume I: The Psychology of Reflection</div>
-                <div class="book-sub">
-                  The first internal shift, the mirror effect, and why we speak more honestly to machines than we do to
-                  people.
-                </div>
-                <div class="book-actions">
-                  <!-- Replace with real Amazon links -->
-                  <a class="inline-link" href="https://www.amazon.com/dp/VOLUME1-ASIN" target="_blank" rel="noopener">
-                    Kindle
-                  </a>
-                  <span>·</span>
-                  <a class="inline-link" href="https://www.amazon.com/dp/VOLUME1-PAPERBACK-ASIN" target="_blank" rel="noopener">
-                    Paperback
-                  </a>
-                </div>
-              </div>
-            </article>
+<!-- GUIDE -->
+<section style="max-width: 980px; margin: 0 auto; padding: 12px 20px 96px;">
+  <h2>Free guide</h2>
+  <p>A short, grounded guide for staying clear and balanced while using AI.</p>
+  <a href="#">Download the guide</a>
+</section>
 
-            <article class="book">
-              <div class="book-spine"></div>
-              <div class="book-main">
-                <div class="book-title">YOU AND AI — Volume II: The Psychology of a Society with AI</div>
-                <div class="book-sub">
-                  Daily practices for staying grounded, healthy boundaries with AI, and how to keep the self at the center
-                  in a world of intelligent tools.
-                </div>
-                <div class="book-actions">
-                  <a class="inline-link" href="https://www.amazon.com/dp/VOLUME2-ASIN" target="_blank" rel="noopener">
-                    Kindle
-                  </a>
-                  <span>·</span>
-                  <a class="inline-link" href="https://www.amazon.com/dp/VOLUME2-PAPERBACK-ASIN" target="_blank" rel="noopener">
-                    Paperback
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="section-title">The inner novel</div>
-          <h2 class="section-heading">On the Edge of Dreaming</h2>
-          <p class="section-text">
-            A meditative psychological novel set in the inner world between waking and sleep — where the radiance, the
-            warmth, and the nightmind all meet.  
-            It is the narrative companion to the psychological work of YOU AND AI™.
-          </p>
-          <div class="books-row" style="margin-top: 12px;">
-            <article class="book">
-              <div class="book-spine"></div>
-              <div class="book-main">
-                <div class="book-title">On the Edge of Dreaming</div>
-                <div class="book-sub">
-                  For readers who feel the quiet internal shift and want language for it.
-                </div>
-                <div class="book-actions">
-                  <a class="inline-link" href="https://www.amazon.com/dp/EDGE-OF-DREAMING-ASIN" target="_blank" rel="noopener">
-                    View on Amazon
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT / FOOTER -->
-      <section id="contact" class="card">
-        <div class="section-title">Stay in the conversation</div>
-        <h2 class="section-heading">Contact &amp; updates</h2>
-        <p class="section-text">
-          For collaboration, AI Signature™ questions, or rights/permissions:
-        </p>
-        <p class="section-text" style="margin-top: 6px;">
-          → Email: <a class="inline-link" href="mailto:YOUR-EMAIL-HERE">YOUR-EMAIL-HERE</a>
-        </p>
-        <p class="section-text" style="margin-top: 8px;">
-          You can also find Raymond on:
-        </p>
-        <p class="section-text">
-          <span>Instagram: <a class="inline-link" href="https://instagram.com/raymondgproost" target="_blank" rel="noopener">@raymondgproost</a></span><br />
-          <span>Facebook: <a class="inline-link" href="https://facebook.com/YOUR-PAGE-HERE" target="_blank" rel="noopener">YOU AND AI™ / Author Page</a></span>
-        </p>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <span>© <span id="year"></span> YOU AND AI™ — Raymond Proost. All rights reserved.</span>
-      <span>Built for a future where humans stay at the center of intelligent systems.</span>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
 
