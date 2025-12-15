@@ -18,6 +18,21 @@
     </p>
 
     <hr style="margin: 28px 0;">
+<p style="font-size:1.05em; line-height:1.7; margin-bottom:18px;">
+  <strong>Step 0 — Download your AI Signature image</strong><br>
+  This image carries your selected interaction mode.
+</p>
+
+<p>
+  <a href="/assets/signatures/child-protected.png" download
+     style="display:inline-block;padding:14px 20px;
+     border:1px solid currentColor;border-radius:12px;
+     text-decoration:none;font-weight:600;">
+     Download your Child / Protected AI Signature
+  </a>
+</p>
+
+<hr style="margin:28px 0;">
 
     <h2 style="margin: 0 0 10px;">Step 1 — Use this instruction first</h2>
 
