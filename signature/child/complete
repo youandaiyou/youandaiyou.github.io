@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank you | YOU AND AI™</title>
+</head>
+<body>
+
+  <main style="max-width: 860px; margin: 56px auto; padding: 0 20px;">
+
+    <h1 style="margin-bottom: 10px;">Thank you for your payment.</h1>
+
+    <p style="font-size: 1.05em; line-height: 1.6; opacity: 0.9; margin-top: 0;">
+      Your AI Signature™ is ready.
+      <br>
+      Mode: <strong>Child / Protected Cognitive Space™</strong>
+    </p>
+
+    <hr style="margin: 28px 0;">
+
+    <h2 style="margin: 0 0 10px;">Step 1 — Use this instruction first</h2>
+
+    <p style="font-size: 1.05em; line-height: 1.7; margin-top: 0;">
+      When starting a chat with any AI, paste this line at the top:
+    </p>
+
+    <div style="border: 1px solid rgba(0,0,0,0.25); border-radius: 12px; padding: 16px; margin: 14px 0;">
+      <p style="margin: 0; font-size: 1.02em; line-height: 1.6;">
+        <strong>Protected Cognitive Space™</strong> —
+        gentle language, emotional safety, clear steps, low pressure.
+        Keep it calm. No intensity. No pressure.
+      </p>
+    </div>
+
+    <p style="opacity: 0.85; margin-top: 10px;">
+      That’s enough. You don’t need to explain anything else.
+    </p>
+
+    <hr style="margin: 28px 0;">
+
+    <h2 style="margin: 0 0 10px;">Step 2 — Download your image</h2>
+
+    <p style="font-size: 1.05em; line-height: 1.7; margin-top: 0;">
+      Click below to download your AI Signature™ image. Keep it on your phone so you can reuse it anytime.
+    </p>
+
+    <p style="margin-top: 16px;">
+      <a href="/assets/signatures/child-protected.png" download style="font-weight: 700; font-size: 1.05em;">
+        Download your AI Signature™ image →
+      </a>
+    </p>
+
+    <p style="margin-top: 22px; opacity: 0.85;">
+      If you ever want to choose a different mode, you can return to the selector.
+    </p>
+
+    <p style="margin-top: 14px;">
+      <a href="/signature/" style="font-weight:700;">Back to AI Signature™ modes →</a>
+      <span style="opacity:0.6;">&nbsp;·&nbsp;</span>
+      <a href="/" style="font-weight:700;">Home →</a>
+    </p>
+
+  </main>
+
+</body>
+</html>
