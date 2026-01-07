@@ -1,4 +1,4 @@
-<!-- index.html (ES) — Spanish mirror (canonical block remains unchanged) -->
+<!-- index.html (ES) — Spanish mirror + hreflang + /es/ structure (canonical block unchanged) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,13 +8,18 @@
   <title>Modo Infantil | YOU AND AI™</title>
   <meta name="description" content="El Modo Infantil funciona al pegarse como texto al inicio de un nuevo chat de IA. Se requiere supervisión adulta durante todo el uso. AI Frame™ está siempre activo." />
 
+  <!-- Canonical: English is authoritative -->
   <link rel="canonical" href="https://youandai.you/signature/child/" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="es" href="https://youandai.you/signature/child/es/" />
+  <link rel="alternate" hreflang="en" href="https://youandai.you/signature/child/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Modo Infantil | YOU AND AI™" />
   <meta property="og:description" content="Copia y pega la declaración canónica de Modo Infantil como primer mensaje en un nuevo chat de IA." />
-  <meta property="og:url" content="https://youandai.you/signature/child/" />
+  <meta property="og:url" content="https://youandai.you/signature/child/es/" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
@@ -27,15 +32,21 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Modo Infantil | YOU AND AI™",
-    "url": "https://youandai.you/signature/child/",
-    "description": "Un estándar de entrada basado en texto para el uso de IA con niños. Supervisión adulta requerida. AI Frame™ está siempre activo."
+    "url": "https://youandai.you/signature/child/es/",
+    "description": "Un estándar de entrada basado en texto para el uso de IA con niños. Supervisión adulta requerida. AI Frame™ está siempre activo.",
+    "inLanguage": "es",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "YOU AND AI™",
+      "url": "https://youandai.you/"
+    }
   }
   </script>
 
   <link rel="stylesheet" href="../../style.css" />
 
   <!--
-    VERSION LOCK
+    VERSION LOCK (Child Mode declaration block)
     Canonical published: 2026-01-07
     Canonical hash (SHA-256): 712f0f224a773cb926f7ea1e1d34b196c25b67cc4e47f5e51a46832ffeaf78ae
     Nota: El bloque canónico NO se traduce. Debe pegarse exactamente.
