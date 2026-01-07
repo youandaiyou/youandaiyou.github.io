@@ -1,4 +1,4 @@
-<!-- index.html (EN) — Version-locked -->
+<!-- index.html (EN) — Version-locked + hreflang + /es/ structure -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,12 @@
   <title>Child Mode | YOU AND AI™</title>
   <meta name="description" content="Child Mode works when pasted as text at the start of a new AI chat. Adult supervision required throughout. AI Frame™ is always active." />
 
+  <!-- Canonical: English is authoritative -->
   <link rel="canonical" href="https://youandai.you/signature/child/" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="en" href="https://youandai.you/signature/child/" />
+  <link rel="alternate" hreflang="es" href="https://youandai.you/signature/child/es/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -28,16 +33,25 @@
     "@type": "WebPage",
     "name": "Child Mode | YOU AND AI™",
     "url": "https://youandai.you/signature/child/",
-    "description": "A text-first standard entry for AI use involving children. Adult supervision required. AI Frame™ is always active."
+    "description": "A text-first standard entry for AI use involving children. Adult supervision required. AI Frame™ is always active.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "YOU AND AI™",
+      "url": "https://youandai.you/"
+    }
   }
   </script>
 
   <link rel="stylesheet" href="../../style.css" />
 
   <!--
-    VERSION LOCK
+    VERSION LOCK (Child Mode declaration block)
     Canonical published: 2026-01-07
     Canonical hash (SHA-256): 712f0f224a773cb926f7ea1e1d34b196c25b67cc4e47f5e51a46832ffeaf78ae
+
+    Note: The hash applies to the canonical declaration block exactly as published.
+    Any changes to the block require a new publish date and hash.
   -->
 </head>
 
