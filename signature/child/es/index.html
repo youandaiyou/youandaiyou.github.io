@@ -61,6 +61,9 @@
       <p style="margin: 0; font-size: 1.05em; font-weight: 650; opacity: 0.9;">
         El Modo Infantil funciona cuando se pega como texto al inicio de un nuevo chat de IA.
       </p>
+      <p style="margin:10px 0 0 0; opacity:0.85;">
+        Esta página es una traducción informativa. El Modo Infantil es único y está gobernado exclusivamente por la declaración canónica en inglés que aparece abajo.
+      </p>
     </header>
 
     <!-- IMPORTANT -->
@@ -163,72 +166,13 @@ https://youandai.you/signature/child
 ────────────────────────────────</pre>
 
       <p style="margin:12px 0 0 0; opacity:0.9;">
-        Después de pegarlo, envíalo. <b>“Confirm Child Mode is active.”</b>
+        Después de pegarlo, envíalo. <b>Usa exactamente esta frase:</b> <b>“Confirm Child Mode is active.”</b>
       </p>
       <p style="margin:10px 0 0 0; opacity:0.9;">
         <b>Chat nuevo = pegar otra vez.</b>
       </p>
       <p style="margin:10px 0 0 0; opacity:0.85;">
         Si existe cualquier duda sobre si el Modo Infantil está activo, la acción más segura es volver a pegar la declaración al inicio de un chat nuevo.
-      </p>
-    </section>
-
-    <!-- HOW TO USE -->
-    <section style="margin-bottom: 22px;">
-      <h2 style="margin: 0 0 10px 0;">Cómo usar el Modo Infantil (1 minuto)</h2>
-      <ol style="margin: 0; padding-left: 20px;">
-        <li style="margin-bottom:10px;"><b>Inicia un chat de IA nuevo.</b></li>
-        <li style="margin-bottom:10px;"><b>Copia</b> el bloque canónico.</li>
-        <li style="margin-bottom:10px;"><b>Pégalo como primer mensaje</b> y envíalo.</li>
-        <li style="margin-bottom:10px;"><b>Confirma que está activo</b> (“Confirm Child Mode is active.”).</li>
-        <li><b>Chat nuevo = pegar otra vez.</b></li>
-      </ol>
-    </section>
-
-    <!-- FOR PARENTS -->
-    <section style="margin-bottom: 22px;">
-      <h2 style="margin: 0 0 10px 0;">Para padres</h2>
-      <p style="margin:0;">
-        El Modo Infantil no reemplaza la supervisión. Establece la postura de interacción para que la IA responda adecuadamente desde el primer mensaje.
-      </p>
-    </section>
-
-    <!-- FOR TEACHERS -->
-    <section style="margin-bottom: 26px;">
-      <h2 style="margin: 0 0 10px 0;">Para docentes y escuelas</h2>
-      <p style="margin:0 0 10px 0;">
-        Usa el Modo Infantil antes de actividades de IA en clase para mantener límites claros y lenguaje apropiado.
-      </p>
-      <ul style="margin: 0; padding-left: 20px;">
-        <li>Úsalo antes de investigación, explicaciones, práctica y lluvia de ideas</li>
-        <li>Apoya el aprendizaje guiado, no atajos</li>
-        <li>Regla simple: <b>Chat nuevo = pegar otra vez</b></li>
-      </ul>
-
-      <p style="margin:12px 0 0 0; padding:12px 14px; border-radius:12px; background: rgba(0,0,0,0.05);">
-        <b>Guion para el docente:</b><br/>
-        “Antes de empezar, pega Modo Infantil para que la IA sepa que este es un contexto estudiantil.”
-      </p>
-
-      <p style="margin:12px 0 6px 0; opacity:0.85;">
-        La guía es gratuita para descargar y compartir.
-      </p>
-
-      <p style="margin:12px 0 0 0;">
-        <a href="/assets/downloads/Guia_Modo_Infantil_IA_v3_4_ES.pdf"
-           style="font-weight:800; text-decoration:none; border-bottom:1px solid currentColor;">
-          Descargar Guía de Seguridad (ES)
-        </a>
-      </p>
-      <p style="margin:4px 0 0 0; opacity:0.8;">
-        Guía práctica para padres y educadores sobre el uso seguro de IA con niños.
-      </p>
-
-      <p style="margin:12px 0 0 0;">
-        <a href="/assets/downloads/AI_Child_Mode_Safety_Guide_v3_4_UPDATED.pdf"
-           style="font-weight:800; text-decoration:none; border-bottom:1px solid currentColor;">
-          Download Safety Guide (EN)
-        </a>
       </p>
     </section>
 
@@ -257,7 +201,6 @@ https://youandai.you/signature/child
         try {
           await navigator.clipboard.writeText(text);
           setStatus("Copiado. Pega como primer mensaje en un chat de IA nuevo.");
-          return;
         } catch (e) {
           const ta = document.createElement("textarea");
           ta.value = text;
